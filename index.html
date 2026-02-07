@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safariyat — Luxury Travel Agency by Bilal Nainia</title>
+    <meta name="description"
+        content="Safariyat - Premium luxury travel experiences across Morocco. Curated by Bilal Nainia.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =============== PAGE LOADER =============== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">Safari<span>yat</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- =============== NAVIGATION =============== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">S</div>
+                <div class="logo-text">Safari<span>yat</span></div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li><a href="#destinations" class="nav-link" data-i18n="nav_destinations">Destinations</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+
+            <!-- Controls -->
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="lang-selector" id="langSelector">
+                    <button class="lang-btn" id="langBtn" aria-label="Change Language">
+                        <span id="currentLangFlag">🇬🇧</span>
+                        <span id="currentLangName">EN</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-option active" data-lang="en">
+                            <span class="flag">🇬🇧</span>
+                            <span>English</span>
+                        </div>
+                        <div class="lang-option" data-lang="ar">
+                            <span class="flag">🇲🇦</span>
+                            <span>العربية</span>
+                        </div>
+                        <div class="lang-option" data-lang="fr">
+                            <span class="flag">🇫🇷</span>
+                            <span>Français</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =============== HERO SECTION =============== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1920&q=80"
+                alt="Morocco Desert Landscape" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <span data-i18n="hero_badge">Premium Luxury Travel</span>
+            </div>
+            <h1 class="hero-title" data-i18n="hero_title_html">Discover the Magic <br>of <span
+                    class="highlight">Morocco</span></h1>
+            <p class="hero-description" data-i18n="hero_desc">Experience the enchanting beauty of Morocco through our
+                curated luxury journeys. From the golden Sahara dunes to the vibrant souks of Marrakech, every moment is
+                crafted to perfection.</p>
+            <div class="hero-buttons">
+                <a href="#destinations" class="btn btn-primary" data-i18n="hero_cta1">Explore Destinations</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero_cta2">Plan Your Journey</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span data-i18n="scroll">Scroll</span>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label" data-i18n="stat1">Happy Travelers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label" data-i18n="stat2">Destinations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label" data-i18n="stat3">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label" data-i18n="stat4">5-Star Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== ABOUT SECTION =============== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Image Side -->
+                <div class="about-image-wrapper fade-in-left">
+                    <img src="https://images.unsplash.com/photo-1548820134-3ee50abb1574?w=800&q=80"
+                        alt="Moroccan Architecture" class="about-image">
+                    <div class="about-image-accent"></div>
+                    <div class="about-experience-badge">
+                        <span class="number">10+</span>
+                        <span class="label" data-i18n="about_badge">Years of Excellence</span>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="about-content fade-in-right">
+                    <span class="section-label" data-i18n="about_label">About Us</span>
+                    <h2 class="section-title" data-i18n="about_title">Crafting Unforgettable Moroccan Experiences</h2>
+                    <p class="about-text" data-i18n="about_text1">Safariyat is a premium travel agency based in Morocco,
+                        dedicated to curating bespoke luxury travel experiences. We believe that travel should be
+                        transformative — a journey that awakens your senses and creates lasting memories.</p>
+                    <p class="about-text" data-i18n="about_text2">From the majestic Atlas Mountains to the serene
+                        Mediterranean coast, our expert team designs each itinerary with meticulous attention to detail,
+                        ensuring every moment exceeds expectations.</p>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <span data-i18n="about_f1">Personalized Itineraries</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <span data-i18n="about_f2">Trusted & Secure</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <span data-i18n="about_f3">Local Expertise</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                            </div>
+                            <span data-i18n="about_f4">5-Star Service</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-emerald" data-i18n="about_cta">Discover Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== DESTINATIONS SECTION =============== -->
+    <section class="section" id="destinations">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label" data-i18n="dest_label">Featured Destinations</span>
+                <h2 class="section-title" data-i18n="dest_title">Explore Morocco's Finest</h2>
+                <p class="section-subtitle" data-i18n="dest_subtitle">Each destination offers a unique tapestry of
+                    culture, history, and natural beauty waiting to be discovered.</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Card 1: Marrakech -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&q=80"
+                            alt="Marrakech" class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_popular">Popular</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest1_loc">Marrakech, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest1_title">The Red City</h3>
+                        <p class="dest-card-desc" data-i18n="dest1_desc">Immerse yourself in vibrant souks, stunning
+                            palaces, and the legendary Jemaa el-Fnaa square.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from">From <strong>$899</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Chefchaouen -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1553244439-57060cd69a82?w=600&q=80"
+                            alt="Chefchaouen" class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_trending">Trending</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest2_loc">Chefchaouen, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest2_title">The Blue Pearl</h3>
+                        <p class="dest-card-desc" data-i18n="dest2_desc">Wander through enchanting blue-washed streets
+                            nestled in the Rif Mountains.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from2">From <strong>$749</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sahara -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507410535025-d8e032fa5c42?w=600&q=80"
+                            alt="Sahara Desert" class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_exclusive">Exclusive</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest3_loc">Merzouga, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest3_title">Sahara Adventure</h3>
+                        <p class="dest-card-desc" data-i18n="dest3_desc">Experience the golden dunes of Erg Chebbi with
+                            luxury desert camps under the stars.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from3">From <strong>$1,199</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Fes -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579017308347-60b5e2d45a88?w=600&q=80" alt="Fes"
+                            class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_cultural">Cultural</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest4_loc">Fes, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest4_title">Imperial Heritage</h3>
+                        <p class="dest-card-desc" data-i18n="dest4_desc">Discover the world's oldest university and the
+                            labyrinthine medina of Fes el Bali.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from4">From <strong>$799</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Essaouira -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80" alt="Essaouira"
+                            class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_coastal">Coastal</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest5_loc">Essaouira, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest5_title">Wind City Retreat</h3>
+                        <p class="dest-card-desc" data-i18n="dest5_desc">Relax in this charming coastal town known for
+                            its art, music, and fresh seafood.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from5">From <strong>$649</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Atlas Mountains -->
+                <div class="dest-card fade-in">
+                    <div class="dest-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80"
+                            alt="Atlas Mountains" class="dest-card-image">
+                        <div class="dest-card-overlay"></div>
+                        <span class="dest-card-badge" data-i18n="dest_adventure">Adventure</span>
+                    </div>
+                    <div class="dest-card-content">
+                        <div class="dest-card-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span data-i18n="dest6_loc">Atlas Mountains, Morocco</span>
+                        </div>
+                        <h3 class="dest-card-title" data-i18n="dest6_title">Mountain Escape</h3>
+                        <p class="dest-card-desc" data-i18n="dest6_desc">Trek through breathtaking valleys and Berber
+                            villages in the High Atlas range.</p>
+                        <div class="dest-card-footer">
+                            <span class="dest-card-price" data-i18n="dest_from6">From <strong>$949</strong></span>
+                            <a href="#contact" class="dest-card-link" data-i18n="dest_explore">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== SERVICES SECTION =============== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label" data-i18n="svc_label">Our Services</span>
+                <h2 class="section-title" data-i18n="svc_title">Tailored for Luxury</h2>
+                <p class="section-subtitle" data-i18n="svc_subtitle">Every service is designed to provide you with an
+                    unparalleled travel experience in Morocco.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="svc1_title">Luxury Riads</h3>
+                    <p class="service-desc" data-i18n="svc1_desc">Stay in authentic Moroccan riads with modern luxury
+                        amenities and impeccable service.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="svc2_title">Guided Tours</h3>
+                    <p class="service-desc" data-i18n="svc2_desc">Expert local guides who bring Morocco's rich history
+                        and culture vividly to life.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="svc3_title">Private Transfers</h3>
+                    <p class="service-desc" data-i18n="svc3_desc">Premium door-to-door transportation in comfort and
+                        style across Morocco.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="svc4_title">Concierge Service</h3>
+                    <p class="service-desc" data-i18n="svc4_desc">24/7 personal concierge to handle every detail of your
+                        Moroccan adventure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== CONTACT SECTION =============== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label" data-i18n="contact_label">Get in Touch</span>
+                <h2 class="section-title" data-i18n="contact_title">Start Your Journey</h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">Ready to experience the magic of Morocco? Reach
+                    out and let us craft your perfect itinerary.</p>
+            </div>
+
+            <div class="contact-wrapper fade-in">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3 class="contact-info-title" data-i18n="contact_info_title">Let's Connect</h3>
+                    <p class="contact-info-subtitle" data-i18n="contact_info_subtitle">Have questions or ready to book?
+                        We'd love to hear from you.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4 data-i18n="contact_name_label">Contact Person</h4>
+                                <p>Bilal Nainia</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4 data-i18n="contact_role_label">Role</h4>
+                                <p data-i18n="contact_role">Web Developer & Management Student</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4 data-i18n="contact_email_label">Email</h4>
+                                <p>contact@safariyat.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4 data-i18n="contact_location_label">Location</h4>
+                                <p data-i18n="contact_location">Morocco</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter/X">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-form-title" data-i18n="form_title">Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form_name">Full Name</label>
+                                <input type="text" class="form-input" placeholder=""
+                                    data-i18n-placeholder="form_name_ph" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form_email">Email Address</label>
+                                <input type="email" class="form-input" placeholder=""
+                                    data-i18n-placeholder="form_email_ph" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form_subject">Subject</label>
+                            <input type="text" class="form-input" placeholder=""
+                                data-i18n-placeholder="form_subject_ph">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form_message">Message</label>
+                            <textarea class="form-textarea" placeholder="" data-i18n-placeholder="form_message_ph"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-emerald form-submit" data-i18n="form_submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== FOOTER =============== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="logo-text">Safari<span>yat</span></div>
+                    <p class="footer-brand-desc" data-i18n="footer_desc">Curating luxury travel experiences across
+                        Morocco. Your journey of a lifetime starts with us.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="Twitter/X">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-col-title" data-i18n="footer_links">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About</a></li>
+                        <li><a href="#destinations" data-i18n="nav_destinations">Destinations</a></li>
+                        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Destinations -->
+                <div>
+                    <h4 class="footer-col-title" data-i18n="footer_dest">Destinations</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Marrakech</a></li>
+                        <li><a href="#">Chefchaouen</a></li>
+                        <li><a href="#">Sahara Desert</a></li>
+                        <li><a href="#">Fes</a></li>
+                        <li><a href="#">Essaouira</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="footer-col-title" data-i18n="footer_support">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer_faq">FAQ</a></li>
+                        <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="#contact" data-i18n="footer_help">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Safariyat. <span data-i18n="footer_crafted">Crafted with</span> ❤️ <span
+                        data-i18n="footer_by">by</span> <a href="#">Bilal Nainia</a>
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
