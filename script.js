@@ -92,6 +92,7 @@ const translations = {
         contact_role_label: "Role",
         contact_role: "Web Developer & Management Student",
         contact_email_label: "Email",
+        contact_whatsapp_label: "WhatsApp",
         contact_location_label: "Location",
         contact_location: "Morocco",
         form_title: "Send a Message",
@@ -211,6 +212,7 @@ const translations = {
         contact_role_label: "الدور",
         contact_role: "مطور ويب وطالب إدارة",
         contact_email_label: "البريد الإلكتروني",
+        contact_whatsapp_label: "واتساب",
         contact_location_label: "الموقع",
         contact_location: "المغرب",
         form_title: "أرسل رسالة",
@@ -330,6 +332,7 @@ const translations = {
         contact_role_label: "Rôle",
         contact_role: "Développeur Web & Étudiant en Management",
         contact_email_label: "Email",
+        contact_whatsapp_label: "WhatsApp",
         contact_location_label: "Localisation",
         contact_location: "Maroc",
         form_title: "Envoyer un Message",
@@ -393,10 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========== THEME TOGGLE ==========
-/**
- * Applies the selected theme and saves to localStorage
- * @param {string} theme - 'light' or 'dark'
- */
 function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     currentTheme = theme;
@@ -409,11 +408,6 @@ themeToggle.addEventListener('click', () => {
 });
 
 // ========== LANGUAGE SWITCHING ==========
-/**
- * Applies translations for the selected language
- * Handles RTL for Arabic and LTR for other languages
- * @param {string} lang - 'en', 'ar', or 'fr'
- */
 function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('safariyat-lang', lang);
@@ -514,10 +508,6 @@ backToTop.addEventListener('click', () => {
 });
 
 // ========== SCROLL ANIMATIONS (Intersection Observer) ==========
-/**
- * Initializes fade-in animations using Intersection Observer API
- * Elements with classes 'fade-in', 'fade-in-left', 'fade-in-right' are observed
- */
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
@@ -540,10 +530,6 @@ function initScrollAnimations() {
 }
 
 // ========== COUNTER ANIMATION ==========
-/**
- * Animates stat counters from 0 to their target value
- * Uses requestAnimationFrame for smooth performance
- */
 function initCounterAnimation() {
     const counters = document.querySelectorAll('[data-count]');
     let animated = false;
